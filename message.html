@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintu Choudhary - Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #030b14;
+            background-image: radial-gradient(circle at 50% 50%, #06405b 0%, #030b14 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        /* Smooth Scrolling */
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom Colors & Effects */
+        
+        .text-neon {
+            color: #00e1ff;
+        }
+        
+        .bg-neon {
+            background-color: #00e1ff;
+        }
+        
+        .border-neon {
+            border-color: #00e1ff;
+        }
+        
+        .shadow-neon {
+            box-shadow: 0 0 15px #00e1ff;
+        }
+        
+        .hover-neon-box:hover {
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.4);
+            border-color: #00e1ff;
+        }
+        /* Organic Glowing Blob Shape */
+        
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 5s ease-in-out infinite;
+            box-shadow: 0 0 40px rgba(0, 225, 255, 0.5);
+        }
+        
+        @keyframes morph {
+            0%,
+            100% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+            34% {
+                border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+            }
+            67% {
+                border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+            }
+        }
+        
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        /* Custom Scrollbar for the container */
+        
+        .scroll-container {
+            scroll-behavior: smooth;
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-track {
+            background: #0b1325;
+            border-radius: 10px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #00e1ff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <!-- Main Glassmorphic Container -->
+    <div class="bg-[#0b1325] w-full max-w-6xl rounded-3xl border border-gray-700 shadow-2xl overflow-hidden p-8 lg:p-12 relative flex flex-col h-[90vh] max-h-[850px]">
+
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center mb-8 shrink-0 border-b border-gray-800 pb-4">
+            <!-- Logo -->
+            <a href="#home" class="text-2xl font-bold tracking-wider">
+                Port<span class="text-neon">folio</span>
+            </a>
+
+            <!-- Links -->
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#home" class="text-gray-300 hover:text-neon transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-neon transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-neon transition">Skills</a>
+                <a href="#services" class="text-gray-300 hover:text-neon transition">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-neon transition">Portfolio</a>
+                <a href="#contact" class="text-gray-300 hover:text-neon transition">Contact</a>
+            </div>
+
+            <!-- Download CV Button -->
+            <a href="#" class="bg-[#f00e51] hover:bg-[#c00940] text-white text-sm font-semibold px-5 py-2 rounded-md transition flex items-center shadow-lg shadow-[#f00e51]/30">
+                Download CV <i class="fas fa-download ml-2"></i>
+            </a>
+        </nav>
+
+        <!-- Scrollable Content Area -->
+        <div class="overflow-y-auto overflow-x-hidden scroll-container flex-grow pr-4 pb-20 space-y-32">
+
+            <!-- ================= HOME SECTION ================= -->
+            <section id="home" class="min-h-[70vh] flex flex-col justify-center pt-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div class="flex justify-center md:justify-start lg:pl-10 relative">
+                        <div class="absolute bg-[#00e1ff] w-[320px] h-[320px] blob-shape -z-10"></div>
+                        <img src="PJ.jpg" alt="Pintu Choudhary" class="w-[300px] h-[300px] object-cover object-top rounded-full border-[6px] border-[#0b1325] shadow-xl">
+                    </div>
+                    <div class="pr-0 lg:pr-10">
+                        <h3 class="text-xl font-medium mb-1">Hello, I'm</h3>
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-3 tracking-wide">Pintu Choudhary</h1>
+                        <h2 class="text-2xl font-semibold mb-5">
+                            And I'm a <span class="text-neon">Full Stack Developer</span><span class="text-neon cursor-blink">|</span>
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-lg">
+                            I build modern, responsive and scalable web applications with MERN stack and bring ideas to life on the web. Passionate about coding and creating seamless user experiences.
+                        </p>
+                        <div class="flex space-x-4 mb-8">
+                            <a href="#" class="w-9 h-9 border border-neon text-neon rounded flex items-center justify-center hover:bg-neon hover:text-[#0b1325] transition shadow-neon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-9 h-9 border border-neon text-neon rounded flex items-center justify-center hover:bg-neon hover:text-[#0b1325] transition shadow-neon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="w-9 h-9 border border-neon text-neon rounded flex items-center justify-center hover:bg-neon hover:text-[#0b1325] transition shadow-neon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/pintuchoudhary143" target="_blank" class="w-9 h-9 border border-neon text-neon rounded flex items-center justify-center hover:bg-neon hover:text-[#0b1325] transition shadow-neon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="flex space-x-5">
+                            <a href="#contact" class="bg-neon text-[#0b1325] font-bold px-8 py-2.5 rounded-lg hover:shadow-[0_0_20px_#00e1ff] transition inline-block">Hire Me</a>
+                            <a href="https://wa.me/918741962337" target="_blank" class="border-2 border-neon text-neon font-bold px-8 py-2.5 rounded-lg hover:bg-neon hover:text-[#0b1325] transition inline-block">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-700/50 pt-10 mt-16">
+                    <div class="flex items-center space-x-4"><span class="text-4xl font-bold">2+</span><span class="text-xs text-gray-400">Years of<br>experience</span></div>
+                    <div class="flex items-center space-x-4 md:border-l border-gray-700/50 md:pl-8"><span class="text-4xl font-bold">50+</span><span class="text-xs text-gray-400">Projects<br>completed</span></div>
+                    <div class="flex items-center space-x-4 md:border-l border-gray-700/50 md:pl-8"><span class="text-4xl font-bold">10+</span><span class="text-xs text-gray-400">Technologies<br>mastered</span></div>
+                    <div class="flex items-center space-x-4 md:border-l border-gray-700/50 md:pl-8"><span class="text-4xl font-bold">20+</span><span class="text-xs text-gray-400">Satisfied<br>Clients</span></div>
+                </div>
+            </section>
+
+            <!-- ================= ABOUT SECTION ================= -->
+            <section id="about" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">About <span class="text-neon">Me</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            I am a motivated and detail-oriented professional with a strong passion for Full Stack Web Development and Computer Education. I work as a Computer Teacher at Patel Aadrash Vidya Niketan Higher Secondary School, Kekri, while managing freelance projects
+                            for PJ Tech and PJ Transport Company.
+                        </p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Name:</span> <span class="text-gray-300">Pintu Choudhary</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Date of Birth:</span> <span class="text-gray-300">25-04-2004</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Email:</span> <span class="text-gray-300">pc4703176@gmail.com</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Phone:</span> <span class="text-gray-300">+91 8741962337</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Address:</span> <span class="text-gray-300">Teliyan Mandir, Kekri, Rajasthan</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-neon">Education & Training</h3>
+                        <div class="space-y-4 border-l-2 border-neon pl-4 ml-2">
+                            <div class="relative">
+                                <div class="absolute -left-[23px] top-1 w-3 h-3 bg-neon rounded-full shadow-neon"></div>
+                                <h4 class="font-bold">B.A (Arts)</h4>
+                                <p class="text-xs text-gray-400">M.D.S.U. Ajmer | 2025</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[23px] top-1 w-3 h-3 bg-neon rounded-full shadow-neon"></div>
+                                <h4 class="font-bold">ITI (COPA)</h4>
+                                <p class="text-xs text-gray-400">BTER Jodhpur | 2023</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[23px] top-1 w-3 h-3 bg-neon rounded-full shadow-neon"></div>
+                                <h4 class="font-bold">TALLY (RS-CFA) & RS-CIT</h4>
+                                <p class="text-xs text-gray-400">Grade A | 2024 & 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SKILLS SECTION ================= -->
+            <section id="skills" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">My <span class="text-neon">Skills</span></h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fab fa-react text-5xl text-blue-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">React / MERN</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fab fa-python text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">Python</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-file-code text-5xl text-orange-500 mb-4"></i>
+                        <h4 class="font-bold text-sm">HTML / CSS / JS</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-c text-5xl text-blue-600 mb-4"></i>
+                        <h4 class="font-bold text-sm">C / C++</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-database text-5xl text-green-500 mb-4"></i>
+                        <h4 class="font-bold text-sm">MySQL</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-file-invoice-dollar text-5xl text-red-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">Accounting / Tally</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-object-group text-5xl text-purple-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">UI/UX Design</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-chalkboard-teacher text-5xl text-neon mb-4"></i>
+                        <h4 class="font-bold text-sm">Computer Teaching</h4>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SERVICES SECTION ================= -->
+            <section id="services" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">My <span class="text-neon">Services</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#111a2e] border border-gray-700 p-8 rounded-xl hover-neon-box transition duration-300 group">
+                        <i class="fas fa-laptop-code text-4xl text-neon mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                        <p class="text-gray-400 text-sm">Building complete frontend and backend applications using the MERN stack, PHP, and Python. Custom dashboards and login systems.</p>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-8 rounded-xl hover-neon-box transition duration-300 group">
+                        <i class="fas fa-paint-brush text-4xl text-neon mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-bold mb-3">Digital Branding</h3>
+                        <p class="text-gray-400 text-sm">Creating high-resolution posters, banners, and logos. Managing digital identity campaigns for educational institutions and local brands.</p>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-8 rounded-xl hover-neon-box transition duration-300 group">
+                        <i class="fas fa-video text-4xl text-neon mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-bold mb-3">Media Production</h3>
+                        <p class="text-gray-400 text-sm">Developing ultra-realistic image and video content with cinematic transitions for promotions, studios, and academies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PORTFOLIO SECTION ================= -->
+            <section id="portfolio" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">My <span class="text-neon">Portfolio</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative group rounded-xl overflow-hidden border border-gray-700 hover:border-neon transition">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="PJ Tech" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <h3 class="text-lg font-bold text-neon mb-2">PJ Systems Dashboard</h3>
+                            <p class="text-xs text-gray-300 mb-3 px-4 text-center">Comprehensive software management interface.</p>
+                            <a href="#" class="bg-neon text-black px-4 py-1 rounded text-sm font-bold"><i class="fas fa-link"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="relative group rounded-xl overflow-hidden border border-gray-700 hover:border-neon transition">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop" alt="Transport" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <h3 class="text-lg font-bold text-neon mb-2">PJ Transport App</h3>
+                            <p class="text-xs text-gray-300 mb-3 px-4 text-center">Logistics and shipment tracking system.</p>
+                            <a href="#" class="bg-neon text-black px-4 py-1 rounded text-sm font-bold"><i class="fas fa-link"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="relative group rounded-xl overflow-hidden border border-gray-700 hover:border-neon transition">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop" alt="School" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <h3 class="text-lg font-bold text-neon mb-2">School Branding</h3>
+                            <p class="text-xs text-gray-300 mb-3 px-4 text-center">Digital marketing for local institutions.</p>
+                            <a href="#" class="bg-neon text-black px-4 py-1 rounded text-sm font-bold"><i class="fas fa-link"></i> View</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= CONTACT SECTION ================= -->
+            <section id="contact" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">Contact <span class="text-neon">Me</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Let's work together!</h3>
+                        <p class="text-gray-400 text-sm mb-8">Feel free to reach out for collaborations, freelance projects, or just to say hi.</p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[#111a2e] rounded-full flex items-center justify-center border border-gray-700 text-neon"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Call / WhatsApp</p>
+                                    <p class="font-semibold">+91 8741962337</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[#111a2e] rounded-full flex items-center justify-center border border-gray-700 text-neon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Email Address</p>
+                                    <p class="font-semibold break-all">pc4703176@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[#111a2e] rounded-full flex items-center justify-center border border-gray-700 text-neon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Location</p>
+                                    <p class="font-semibold">Teliyan Mandir, Kekri, Rajasthan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintu Choudhary - Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #030b14;
+            /* Clean Solid Dark Background */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+        /* Smooth Scrolling */
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom Colors & Effects */
+        
+        .text-neon {
+            color: #00e1ff;
+        }
+        
+        .bg-neon {
+            background-color: #00e1ff;
+        }
+        
+        .border-neon {
+            border-color: #00e1ff;
+        }
+        
+        .shadow-neon {
+            box-shadow: 0 0 15px #00e1ff;
+        }
+        
+        .hover-neon-box:hover {
+            box-shadow: 0 0 20px rgba(0, 225, 255, 0.4);
+            border-color: #00e1ff;
+        }
+        
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        /* Custom Scrollbar for the container */
+        
+        .scroll-container {
+            scroll-behavior: smooth;
+        }
+        
+        .scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-track {
+            background: #0b1325;
+            border-radius: 10px;
+        }
+        
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #00e1ff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <a href="https://wa.me/918741962337" target="_blank" class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-110 hover:shadow-[0_0_25px_rgba(37,211,102,0.9)] transition duration-300 relative group animate-bounce">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute right-16 bg-gray-900 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap border border-gray-700">WhatsApp Me</span>
+        </a>
+        <a href="tel:+918741962337" class="w-14 h-14 bg-neon rounded-full flex items-center justify-center text-[#0b1325] text-2xl shadow-[0_0_15px_rgba(0,225,255,0.6)] hover:scale-110 hover:shadow-[0_0_25px_rgba(0,225,255,0.9)] transition duration-300 relative group">
+            <i class="fas fa-phone-alt"></i>
+            <span class="absolute right-16 bg-gray-900 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap border border-gray-700">Call Me</span>
+        </a>
+    </div>
+
+    <div class="bg-[#0b1325] w-full max-w-6xl rounded-3xl border border-gray-700 shadow-2xl overflow-hidden p-8 lg:p-12 relative flex flex-col h-[90vh] max-h-[850px]">
+
+        <nav class="flex justify-between items-center mb-8 shrink-0 border-b border-gray-800 pb-4">
+            <a href="#home" class="text-2xl font-bold tracking-wider">
+                Pintu<span class="text-neon">Choudhary</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#home" class="text-gray-300 hover:text-neon transition">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-neon transition">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-neon transition">Skills</a>
+                <a href="#services" class="text-gray-300 hover:text-neon transition">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-neon transition">Portfolio</a>
+                <a href="#contact" class="text-gray-300 hover:text-neon transition">Contact</a>
+            </div>
+
+            <a href="Pintu_CV.html" class="bg-[#f00e51] hover:bg-[#c00940] text-white text-sm font-semibold px-5 py-2 rounded-md transition flex items-center shadow-lg shadow-[#f00e51]/30">
+                Download CV <i class="fas fa-download ml-2"></i>
+            </a>
+        </nav>
+
+        <div class="overflow-y-auto overflow-x-hidden scroll-container flex-grow pr-4 pb-10 space-y-32" id="scroll-area">
+
+            <section id="home" class="min-h-[70vh] flex flex-col justify-center pt-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div class="flex justify-center md:justify-start lg:pl-10 relative">
+                        <img src="PJ.webp" alt="Pintu Choudhary" class="w-[300px] h-[300px] object-cover object-top rounded-full border-[6px] border-[#0b1325] shadow-xl">
+                    </div>
+                    <div class="pr-0 lg:pr-10">
+                        <h3 class="text-xl font-medium mb-1">Hello, I'm</h3>
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-3 tracking-wide">Pintu Choudhary</h1>
+                        <h2 class="text-2xl font-semibold mb-5">
+                            And I'm a <span class="text-neon">Web Developer</span><span class="text-neon cursor-blink">|</span>
+                        </h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8 max-w-lg">
+                            I build modern, responsive and scalable web applications with MERN stack and bring ideas to life on the web. Passionate about coding and creating seamless user experiences.
+                        </p>
+                        <div class="flex space-x-6 text-xl text-gray-500 dark:text-gray-400">
+                            <a href="https://github.com/pintuchoudhary143" class="hover:text-primary transition"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/pintu-choudhary-7b30a9260/" class="hover:text-primary transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/official__jaat__rj__48/" class="hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/pintu.choudhary.976711" class="hover:text-primary transition"><i class="fab fa-facebook"></i></a>
+                            <a href="https://web.telegram.org/k/" class="hover:text-primary transition"><i class="fab fa-telegram"></i></a>
+                            <!-- WhatsApp Icon Added Here -->
+                            <a href="https://www.youtube.com/@P.A.V.N.SR.SEC.SCHOOL_KEKRI" class="hover:text-primary transition"><i class="fab fa-youtube"></i></a>
+                            <!-- WhatsApp Icon Added Here -->
+                            <a href="https://wa.me/918741962337" target="_blank" class="hover:text-green-500 transition" title="Chat on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <div class="flex space-x-5">
+                            <a href="#contact" class="bg-neon text-[#0b1325] font-bold px-8 py-2.5 rounded-lg hover:shadow-[0_0_20px_#00e1ff] transition inline-block">Hire Me</a>
+                            <a href="https://wa.me/918741962337" target="_blank" class="border-2 border-neon text-neon font-bold px-8 py-2.5 rounded-lg hover:bg-neon hover:text-[#0b1325] transition inline-block">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-gray-700/50 pt-10 mt-16">
+                        <div class="flex items-center space-x-4"><span class="text-4xl font-bold">2+</span><span class="text-xs text-gray-400">Years of<br>experience</span></div>
+                        <div class="flex items-center space-x-4 md:border-l border-gray-700/50 md:pl-8"><span class="text-4xl font-bold">50+</span><span class="text-xs text-gray-400">Projects<br>completed</span></div>
+                        <div class="flex items-center space-x-4 md:border-l border-gray-700/50 md:pl-8"><span class="text-4xl font-bold">10+</span><span class="text-xs text-gray-400">Technologies<br>mastered</span></div>
+                        <div class="flex items-center space-x-4 md:border-l border-gray-700/50 md:pl-8"><span class="text-4xl font-bold">20+</span><span class="text-xs text-gray-400">Satisfied<br>Clients</span></div>
+                    </div>
+            </section>
+
+            <section id="about" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">About <span class="text-neon">Me</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            I am a motivated and detail-oriented professional with a strong passion for Full Stack Web Development and Computer Education. I work as a Computer Teacher at Patel Aadrash Vidya Niketan Higher Secondary School, Kekri, while managing freelance projects
+                            for PJ Tech and PJ Transport Company.
+                        </p>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Name:</span> <span class="text-gray-300">Pintu Choudhary</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Date of Birth:</span> <span class="text-gray-300">25-04-2004</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Email:</span> <span class="text-gray-300">pc4703176@gmail.com</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Phone:</span> <span class="text-gray-300">+91 8741962337</span></li>
+                            <li class="flex border-b border-gray-700 pb-2"><span class="w-32 text-neon font-semibold">Address:</span> <span class="text-gray-300">Hingoniya, Ajmer, Rajasthan</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-neon">Education & Training</h3>
+                        <div class="space-y-4 border-l-2 border-neon pl-4 ml-2">
+                            <div class="relative">
+                                <div class="absolute -left-[23px] top-1 w-3 h-3 bg-neon rounded-full shadow-neon"></div>
+                                <h4 class="font-bold">B.A (Arts)</h4>
+                                <p class="text-xs text-gray-400">M.D.S.U. Ajmer | 2025</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[23px] top-1 w-3 h-3 bg-neon rounded-full shadow-neon"></div>
+                                <h4 class="font-bold">ITI (COPA)</h4>
+                                <p class="text-xs text-gray-400">BTER Jodhpur | 2023</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[23px] top-1 w-3 h-3 bg-neon rounded-full shadow-neon"></div>
+                                <h4 class="font-bold">TALLY (RS-CFA) & RS-CIT</h4>
+                                <p class="text-xs text-gray-400">Grade A | 2024 & 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">My <span class="text-neon">Skills</span></h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fab fa-react text-5xl text-blue-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">React / MERN</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fab fa-python text-5xl text-yellow-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">Python</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-file-code text-5xl text-orange-500 mb-4"></i>
+                        <h4 class="font-bold text-sm">HTML / CSS / JS</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-c text-5xl text-blue-600 mb-4"></i>
+                        <h4 class="font-bold text-sm">C / C++</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-database text-5xl text-green-500 mb-4"></i>
+                        <h4 class="font-bold text-sm">MySQL</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-file-invoice-dollar text-5xl text-red-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">Accounting / Tally</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-object-group text-5xl text-purple-400 mb-4"></i>
+                        <h4 class="font-bold text-sm">UI/UX Design</h4>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-6 rounded-xl text-center hover-neon-box transition duration-300">
+                        <i class="fas fa-chalkboard-teacher text-5xl text-neon mb-4"></i>
+                        <h4 class="font-bold text-sm">Computer Teaching</h4>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">My <span class="text-neon">Services</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#111a2e] border border-gray-700 p-8 rounded-xl hover-neon-box transition duration-300 group">
+                        <i class="fas fa-laptop-code text-4xl text-neon mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                        <p class="text-gray-400 text-sm">Building complete frontend and backend applications using the MERN stack, PHP, and Python. Custom dashboards and login systems.</p>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-8 rounded-xl hover-neon-box transition duration-300 group">
+                        <i class="fas fa-paint-brush text-4xl text-neon mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-bold mb-3">Digital Branding</h3>
+                        <p class="text-gray-400 text-sm">Creating high-resolution posters, banners, and logos. Managing digital identity campaigns for educational institutions and local brands.</p>
+                    </div>
+                    <div class="bg-[#111a2e] border border-gray-700 p-8 rounded-xl hover-neon-box transition duration-300 group">
+                        <i class="fas fa-video text-4xl text-neon mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-bold mb-3">Media Production</h3>
+                        <p class="text-gray-400 text-sm">Developing ultra-realistic image and video content with cinematic transitions for promotions, studios, and academies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">My <span class="text-neon">Portfolio</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative group rounded-xl overflow-hidden border border-gray-700 hover:border-neon transition">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="PJ Tech" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <h3 class="text-lg font-bold text-neon mb-2">PJ Systems Dashboard</h3>
+                            <p class="text-xs text-gray-300 mb-3 px-4 text-center">Comprehensive software management interface.</p>
+                            <a href="#" class="bg-neon text-black px-4 py-1 rounded text-sm font-bold"><i class="fas fa-link"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="relative group rounded-xl overflow-hidden border border-gray-700 hover:border-neon transition">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop" alt="Transport" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <h3 class="text-lg font-bold text-neon mb-2">PJ Transport App</h3>
+                            <p class="text-xs text-gray-300 mb-3 px-4 text-center">Logistics and shipment tracking system.</p>
+                            <a href="#" class="bg-neon text-black px-4 py-1 rounded text-sm font-bold"><i class="fas fa-link"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="relative group rounded-xl overflow-hidden border border-gray-700 hover:border-neon transition">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop" alt="School" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <h3 class="text-lg font-bold text-neon mb-2">School Branding</h3>
+                            <p class="text-xs text-gray-300 mb-3 px-4 text-center">Digital marketing for local institutions.</p>
+                            <a href="#" class="bg-neon text-black px-4 py-1 rounded text-sm font-bold"><i class="fas fa-link"></i> View</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="pt-10">
+                <h2 class="text-3xl font-bold mb-8">Contact <span class="text-neon">Me</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Let's work together!</h3>
+                        <p class="text-gray-400 text-sm mb-8">Feel free to reach out for collaborations, freelance projects, or just to say hi.</p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[#111a2e] rounded-full flex items-center justify-center border border-gray-700 text-neon"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Call / WhatsApp</p>
+                                    <p class="font-semibold">+91 8741962337</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[#111a2e] rounded-full flex items-center justify-center border border-gray-700 text-neon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Email Address</p>
+                                    <p class="font-semibold break-all">pc4703176@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-[#111a2e] rounded-full flex items-center justify-center border border-gray-700 text-neon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Location</p>
+                                    <p class="font-semibold">Hingoniya, Ajmer, Rajasthan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="bg-[#111a2e] p-6 rounded-xl border border-gray-700">
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <input type="text" id="waName" placeholder="Your Name" class="bg-[#030b14] border border-gray-700 text-white rounded p-3 text-sm focus:outline-none focus:border-neon transition">
+                            <input type="email" id="waEmail" placeholder="Your Email" class="bg-[#030b14] border border-gray-700 text-white rounded p-3 text-sm focus:outline-none focus:border-neon transition">
+                        </div>
+                        <input type="text" id="waSubject" placeholder="Subject" class="bg-[#030b14] border border-gray-700 text-white rounded p-3 text-sm w-full mb-4 focus:outline-none focus:border-neon transition">
+                        <textarea id="waMessage" placeholder="Your Message" rows="4" class="bg-[#030b14] border border-gray-700 text-white rounded p-3 text-sm w-full mb-4 focus:outline-none focus:border-neon transition resize-none"></textarea>
+
+                        <button type="button" onclick="sendToWhatsApp()" class="bg-neon text-black font-bold w-full py-3 rounded hover:shadow-neon transition">
+                            <i class="fab fa-whatsapp mr-2 text-lg"></i> Send Message via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="mt-20 pt-16 text-sm text-gray-300">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                    <div>
+                        <a href="#home" class="text-2xl font-bold tracking-wider text-white block mb-2">
+                            Port<span class="text-neon">folio</span>
+                        </a>
+                        <p class="text-xs text-gray-500 mb-6 tracking-wide">Full Stack Developer</p>
+
+                        <h4 class="text-neon font-bold mb-3 text-base">About Me</h4>
+                        <p class="text-xs leading-relaxed text-gray-400 mb-6">
+                            I want to help bring talented students and unique startups together by building modern scalable web applications.
+                        </p>
+
+                        <h4 class="text-neon font-bold mb-3 text-base">Contact Us</h4>
+                        <p class="text-xs mb-2 flex items-center gap-3"><i class="fas fa-phone-alt text-neon"></i> +91 8741962337</p>
+                        <p class="text-xs flex items-center gap-3 break-all"><i class="fas fa-envelope text-neon"></i> pc4703176@gmail.com</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-neon font-bold mb-6 text-base">Information</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li><a href="#about" class="hover:text-neon transition">About Us</a></li>
+                            <li><a href="#portfolio" class="hover:text-neon transition">More Search</a></li>
+                            <li><a href="#portfolio" class="hover:text-neon transition">Projects</a></li>
+                            <li><a href="#skills" class="hover:text-neon transition">Testimonials</a></li>
+                            <li><a href="#contact" class="hover:text-neon transition">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-neon font-bold mb-6 text-base">Helpful Links</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li><a href="#services" class="hover:text-neon transition">Services</a></li>
+                            <li><a href="#contact" class="hover:text-neon transition">Supports</a></li>
+                            <li><a href="#" class="hover:text-neon transition">Terms & Condition</a></li>
+                            <li><a href="#" class="hover:text-neon transition">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <!-- Column 4: Subscribe Box (Fully Functional UI) -->
+                    <div>
+                        <h4 class="text-white font-bold mb-6 text-base">Subscribe More Info</h4>
+                        <div class="relative mb-4">
+                            <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xs"></i>
+                            <input type="email" id="subEmail" placeholder="Enter your Email" class="w-full bg-white text-black text-xs py-3 pl-8 pr-4 rounded focus:outline-none transition border-2 border-transparent focus:border-neon">
+                        </div>
+                        <button type="button" id="subBtn" onclick="subscribeUser()" class="bg-neon text-black font-bold text-xs py-2 px-6 rounded hover:shadow-neon transition duration-300 w-full sm:w-auto">Subscribe</button>
+                        <!-- Subscribe Message Area -->
+                        <p id="subMsg" class="text-xs mt-2 hidden"></p>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom Strip -->
+                <div class="mt-12 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center relative pb-6">
+
+                    <!-- Social Icons (Rounded background) -->
+                    <div class="flex space-x-3 mb-4 md:mb-0">
+                        <a href="https://www.facebook.com/pintu.choudhary.976711" class="w-8 h-8 bg-neon text-black rounded-full flex items-center justify-center hover:scale-110 transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/in/pintu-choudhary-7b30a9260/" target="_blank" class="w-8 h-8 bg-neon text-black rounded-full flex items-center justify-center hover:scale-110 transition"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/official__jaat__rj__48/" class="w-8 h-8 bg-neon text-black rounded-full flex items-center justify-center hover:scale-110 transition"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://github.com/pintuchoudhary143" target="_blank" class="w-8 h-8 bg-neon text-black rounded-full flex items-center justify-center hover:scale-110 transition"><i class="fab fa-github text-sm"></i></a>
+                    </div>
+
+                    <!-- Copyright text -->
+                    <p class="text-xs text-gray-500 tracking-wide md:absolute md:right-12">© 2026 Pintu Choudhary. All right reserved</p>
+
+                    <!-- Scroll to top arrow -->
+                    <a href="#home" class="w-8 h-8 bg-neon text-black flex items-center justify-center rounded hover:shadow-neon transition md:absolute md:right-0">
+                        <i class="fas fa-chevron-up text-sm"></i>
+                    </a>
+                </div>
+            </footer>
+
+            </div>
+        </div>
+
+        <!-- Scripts (WhatsApp & Subscribe Feature) -->
+        <script>
+            // WhatsApp Sender Logic
+            function sendToWhatsApp() {
+                var name = document.getElementById("waName").value;
+                var email = document.getElementById("waEmail").value;
+                var subject = document.getElementById("waSubject").value;
+                var message = document.getElementById("waMessage").value;
+
+                if (name === "" || message === "") {
+                    alert("Bhai, please enter your Name and Message first!");
+                    return;
+                }
+
+                var whatsappMessage = "Hello Pintu,\n\nYou have a new message from your portfolio website:\n\n";
+                whatsappMessage += "*Name:* " + name + "\n";
+                whatsappMessage += "*Email:* " + email + "\n";
+                whatsappMessage += "*Subject:* " + subject + "\n";
+                whatsappMessage += "*Message:* " + message;
+
+                var encodedText = encodeURIComponent(whatsappMessage);
+                var phoneNumber = "918741962337";
+                var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodedText;
+
+                window.open(whatsappURL, '_blank');
+            }
+
+            // Subscribe Button Logic (UI Update)
+            function subscribeUser() {
+                var emailInput = document.getElementById("subEmail");
+                var subBtn = document.getElementById("subBtn");
+                var subMsg = document.getElementById("subMsg");
+                var email = emailInput.value.trim();
+
+                // Simple validation
+                if (email === "" || !email.includes("@")) {
+                    subMsg.innerText = "Please enter a valid email address!";
+                    subMsg.className = "text-xs mt-2 text-red-500 block";
+                    return;
+                }
+
+                // Success UI Update
+                subBtn.innerHTML = "<i class='fas fa-check-circle'></i> Subscribed!";
+                subBtn.classList.remove("bg-neon", "text-black");
+                subBtn.classList.add("bg-green-500", "text-white", "shadow-[0_0_15px_#22c55e]");
+
+                subMsg.innerText = "Thank you for subscribing!";
+                subMsg.className = "text-xs mt-2 text-green-400 block";
+
+                emailInput.value = ""; // Clear the input box
+
+                // Reset the button after 3 seconds
+                setTimeout(function() {
+                    subBtn.innerHTML = "Subscribe";
+                    subBtn.classList.remove("bg-green-500", "text-white", "shadow-[0_0_15px_#22c55e]");
+                    subBtn.classList.add("bg-neon", "text-black");
+                    subMsg.classList.add("hidden");
+                }, 3000);
+            }
+        </script>
+</body>
+
+</html>
